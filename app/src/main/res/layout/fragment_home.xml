@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.main.home.HomeFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiant_color_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/what_you_would_like_to_watch"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_text_large"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_margin="@dimen/margin_medium"
+                android:autofillHints=""
+                android:background="@drawable/search_edit_background"
+                android:drawableStart="@drawable/search"
+                android:drawableEnd="@drawable/microphone"
+                android:drawablePadding="@dimen/margin_small"
+                android:ems="10"
+                android:hint="@string/search_movies"
+                android:inputType="text"
+                android:padding="@dimen/search_padding"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/search_padding"
+                android:text="@string/new_movies"
+                android:textColor="@color/dark_yellow"
+                android:textSize="@dimen/movies_size"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/new_movies_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:minHeight="200dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/search_padding"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/loading_1"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/new_movies_recycler_view"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/new_movies_recycler_view"
+
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/search_padding"
+                android:text="@string/up_coming_movies"
+                android:textColor="@color/dark_yellow"
+                android:textSize="@dimen/movies_size"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="120dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/coming_movies_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:minHeight="200dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/search_padding"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/loading_2"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/coming_movies_recycler_view"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/coming_movies_recycler_view"
+
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

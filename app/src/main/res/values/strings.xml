@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MovieAppEx</string>
+    <string name="intro_title">Watch Videos in\nVirtual Reality</string>
+    <string name="launcher_subtitle">Download and watch offline\nwherever you are</string>
+    <string name="launcher_btn_text">Get In</string>
+    <string name="log_in">Log in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forget_your_password">Forget your Password?</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="register_now">Register now</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="full_name">Full Name</string>
+    <string name="have_account">Have account?</string>
+    <string name="login_now">Login now</string>
+    <string name="what_you_would_like_to_watch">What you would like To watch?</string>
+    <string name="search_movies">Search Movies..</string>
+    <string name="new_movies">New Movies</string>
+    <string name="up_coming_movies">Upcomming Movies</string>
+    <string name="_0">0</string>
+    <string name="title">title</string>
+    <string name="summery">Summery</string>
+    <string name="text">text</string>
+    <string name="actor">Actor</string>
+    <string name="score">score</string>
+</resources>
